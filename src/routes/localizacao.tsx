@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import hero from "@/assets/hero.jpg";
-import { MapPin, Phone, Mail, Clock, ShieldCheck, Compass, Sparkles, Navigation, Car } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ShieldCheck, Compass, Sparkles, Navigation, Car as CarIcon } from "lucide-react";
 
 export const Route = createFileRoute("/localizacao")({
   component: Localizacao,
@@ -257,7 +257,7 @@ function Localizacao() {
               href="/test-drive"
               className="text-center px-6 py-4 bg-secondary text-primary-foreground text-xs tracking-[0.3em] uppercase font-semibold hover:bg-secondary/80 transition-all hover:shadow-gold flex items-center justify-center gap-2"
             >
-              <Car className="w-3.5 h-3.5" /> Test Drive
+              <CarIcon className="w-3.5 h-3.5" /> Test Drive
             </a>
             <p className="text-[10px] text-muted-foreground text-center italic">
               * O acesso aos showrooms é restrito a titulares de convite ou agendamento prévio aprovado.
