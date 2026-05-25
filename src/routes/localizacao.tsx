@@ -75,6 +75,18 @@ function Localizacao() {
     },
     {
       id: "monaco",
+      city: "Mónaco",
+      location: "Monte Carlo",
+      address: "Avenue des Spélugues, 17, 98000 Mónaco",
+      phone: "+377 97 97 00 00 (Concierge Europe)",
+      email: "monaco@luxurycars.com",
+      hours: "Segunda a Sexta: 10:00h - 18:30h | Sábado: Apenas VIP",
+      coords: "43.7384° N, 7.4246° E",
+      mapX: "32%",
+      mapY: "67%",
+    },
+    {
+      id: "dubai",
       city: "Dubai",
       location: "Dubai Marina",
       address: "Marina Plaza, Suite 3201, Dubai Marina, EAU",
@@ -160,7 +172,7 @@ function Localizacao() {
               <span className="text-[0.65rem] tracking-[0.4em] text-gold uppercase">— Selecionar Cidade —</span>
               
               {/* Botões do Seletor */}
-              <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-1 gap-2 pt-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 pt-2">
                 {showrooms.map((s) => (
                   <button
                     key={s.id}
