@@ -134,6 +134,7 @@ export function ChatSupport() {
       "sobre", "história", "historia", "empresa", "fundador", "fundadores", "quem são", "quem somos", 
       "luxurycars", "site", "página", "pagina", "aba", "ajuda", "o que fazes", "comandos", "anexar", 
       "anexo", "ficheiro", "ficheiros", "imagem", "imagens",
+      "são paulo", "sao paulo", "brasil", "brazil", "jardins", "avenida europa", "sp", "são", "paulo",
       "olá", "ola", "oi", "boas", "bom dia", "boa tarde", "boa noite", "alô", "alo", "hello", "hi", 
       "obrigado", "obrigada", "agradecido", "grato", "perfeito", "sim", "não", "nao", "ok", "reiniciar", 
       "limpar", "reset", "como", "como estas", "como está", "como faz", "como faço"
@@ -142,7 +143,7 @@ export function ChatSupport() {
     const isOutOfScope = !allowedKeywords.some(kw => text.includes(kw));
 
     if (isOutOfScope) {
-      return "Como assessor digital privado da **LuxuryCars**, a minha assistência é estritamente dedicada à nossa coleção de automóveis exclusivos, aos nossos showrooms e aos serviços da LuxuryCars.\n\nPor favor, indique se deseja obter informações sobre alguma das nossas viaturas de elite, comparar especificações técnicas ou agendar uma visita privada a uma das nossas galerias (Lisboa, Porto, Portimão, Mónaco ou Dubai).";
+      return "Desculpe, mas não posso responder isso";
     }
 
     // 1. GREETINGS
@@ -455,7 +456,7 @@ export function ChatSupport() {
     // 13. SHOWROOM & BOOKING GENERAL
     if (text.includes("visita") || text.includes("agendar") || text.includes("marcar") || text.includes("showroom") || text.includes("contacto") || text.includes("morada") || text.includes("onde") || text.includes("telefone") || text.includes("email")) {
       return "A LuxuryCars opera sob a máxima discrição e exclusividade.\n\n" +
-             "• **Showrooms Físicos**: Dispomos de galerias privadas em **Lisboa (Parque das Nações), Porto (Foz), Portimão (Marina), Mónaco (Monte Carlo) e Dubai (Marina)**.\n" +
+             "• **Showrooms Físicos**: Dispomos de galerias privadas em **Lisboa (Parque das Nações), Porto (Foz), Portimão (Marina), Mónaco (Monte Carlo), Dubai (Marina) e São Paulo (Jardins)**.\n" +
              "• **Política de Admissão**: Visitas apenas permitidas mediante marcação e verificação prévia de perfil de colecionador.\n" +
              "• **Como Agendar**: Envie a sua proposta de data e o modelo de interesse para **concierge@luxurycars.com** ou contacte o nosso Concierge 24/7 de forma direta. Alternativamente, utilize o botão 'Marcar Visita' na barra superior do nosso site.\n\n" +
              "Deseja que prepare uma minuta de contacto com os seus dados de interesse?";

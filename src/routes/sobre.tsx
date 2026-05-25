@@ -48,6 +48,11 @@ function Sobre() {
       location: "Dubai Marina",
       desc: "Uma galeria de proporções majestosas que exibe as maiores jóias da engenharia automóvel moderna, com suporte personalizado para importação direta e preparação de coleções de luxo no Médio Oriente.",
     },
+    {
+      city: "São Paulo",
+      location: "Jardins",
+      desc: "A nova unidade exclusiva em São Paulo, situada na Avenida Europa, 123 – Jardins, oferece um ambiente sofisticado para colecionadores latino‑americanos, combinando design contemporâneo e atendimento de concierge 24/7.",
+    },
   ];
 
   const servicos = [
@@ -80,7 +85,7 @@ function Sobre() {
         <Link to="/">
           <LogoMini />
         </Link>
-        <div className="flex items-center gap-6 md:gap-8">
+        <div className="flex items-center gap-5 md:gap-8">
           <Link
             to="/"
             className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors"
@@ -90,6 +95,12 @@ function Sobre() {
           <span className="text-[0.65rem] tracking-[0.3em] text-gold uppercase font-semibold border-b border-gold/45 pb-0.5">
             Sobre Nós
           </span>
+          <Link
+            to="/localizacao"
+            className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors"
+          >
+            Localização
+          </Link>
           <Link
             to="/"
             hash="contacto"
