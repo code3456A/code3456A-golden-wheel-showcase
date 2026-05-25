@@ -9,12 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TestDriveRouteImport } from './routes/test-drive'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as NoticiasRouteImport } from './routes/noticias'
 import { Route as LocalizacaoRouteImport } from './routes/localizacao'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CarroSlugRouteImport } from './routes/carro.$slug'
 
+const TestDriveRoute = TestDriveRouteImport.update({
+  id: '/test-drive',
+  path: '/test-drive',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/localizacao': typeof LocalizacaoRoute
   '/noticias': typeof NoticiasRoute
   '/sobre': typeof SobreRoute
+  '/test-drive': typeof TestDriveRoute
   '/carro/$slug': typeof CarroSlugRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/localizacao': typeof LocalizacaoRoute
   '/noticias': typeof NoticiasRoute
   '/sobre': typeof SobreRoute
+  '/test-drive': typeof TestDriveRoute
   '/carro/$slug': typeof CarroSlugRoute
 }
 export interface FileRoutesById {
@@ -61,19 +69,33 @@ export interface FileRoutesById {
   '/localizacao': typeof LocalizacaoRoute
   '/noticias': typeof NoticiasRoute
   '/sobre': typeof SobreRoute
+  '/test-drive': typeof TestDriveRoute
   '/carro/$slug': typeof CarroSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/localizacao' | '/noticias' | '/sobre' | '/carro/$slug'
+  fullPaths:
+    | '/'
+    | '/localizacao'
+    | '/noticias'
+    | '/sobre'
+    | '/test-drive'
+    | '/carro/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/localizacao' | '/noticias' | '/sobre' | '/carro/$slug'
+  to:
+    | '/'
+    | '/localizacao'
+    | '/noticias'
+    | '/sobre'
+    | '/test-drive'
+    | '/carro/$slug'
   id:
     | '__root__'
     | '/'
     | '/localizacao'
     | '/noticias'
     | '/sobre'
+    | '/test-drive'
     | '/carro/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -82,11 +104,19 @@ export interface RootRouteChildren {
   LocalizacaoRoute: typeof LocalizacaoRoute
   NoticiasRoute: typeof NoticiasRoute
   SobreRoute: typeof SobreRoute
+  TestDriveRoute: typeof TestDriveRoute
   CarroSlugRoute: typeof CarroSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/test-drive': {
+      id: '/test-drive'
+      path: '/test-drive'
+      fullPath: '/test-drive'
+      preLoaderRoute: typeof TestDriveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre': {
       id: '/sobre'
       path: '/sobre'
@@ -130,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   LocalizacaoRoute: LocalizacaoRoute,
   NoticiasRoute: NoticiasRoute,
   SobreRoute: SobreRoute,
+  TestDriveRoute: TestDriveRoute,
   CarroSlugRoute: CarroSlugRoute,
 }
 export const routeTree = rootRouteImport

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import hero from "@/assets/hero.jpg";
-import { MapPin, Phone, Mail, Clock, ShieldCheck, Compass, Sparkles, Navigation } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ShieldCheck, Compass, Sparkles, Navigation, Car } from "lucide-react";
 
 export const Route = createFileRoute("/localizacao")({
   component: Localizacao,
