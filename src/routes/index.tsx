@@ -115,9 +115,6 @@ function Index() {
             <Link to="/sobre" className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors">
               Sobre Nós
             </Link>
-            <Link to="/localizacao" className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors">
-              Localização
-            </Link>
             <a href="#contacto" className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors">
               Contacto
             </a>
