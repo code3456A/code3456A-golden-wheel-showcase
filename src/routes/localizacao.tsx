@@ -140,25 +140,15 @@ function Localizacao() {
 
       {/* HERO INSTITUCIONAL */}
       <section className="relative h-[45vh] flex flex-col items-center justify-center px-6 overflow-hidden border-b border-gold-soft/30">
-        <div className="absolute inset-0 -z-10">
-          <img src={hero} alt="" className="h-full w-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-        </div>
-
-        <div className="text-center max-w-4xl fade-up space-y-4">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="h-px w-10 divider-gold" />
-            <span className="text-[0.65rem] tracking-[0.4em] text-gold uppercase">Galerias de Prestígio</span>
-            <span className="h-px w-10 divider-gold" />
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 -z-10">
+              <img src={hero} alt="" className="h-full w-full object-cover opacity-25" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+            </div>
           </div>
-          <h1 className="font-display text-4xl sm:text-6xl md:text-7xl text-gold-gradient font-bold tracking-wide">
-            Os Nossos Showrooms
-          </h1>
-          <p className="text-muted-foreground text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
-            Visite-nos em ambientes preparados exclusivamente para a apreciação técnica e estética da nossa coleção de elite.
-          </p>
-        </div>
-      </section>
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-gold-gradient font-bold tracking-wide">Os Nossos Showrooms</h1>
+          <p className="text-muted-foreground text-xs md:text-sm max-w-xl mx-auto mt-4">Visite-nos em ambientes preparados exclusivamente para a apreciação técnica e estética da nossa coleção de elite.</p>
+        </section>
 
       {/* SECÇÃO INTERATIVA COM MAPA E DETALHES */}
       <section className="px-6 md:px-12 py-16 md:py-24 max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
