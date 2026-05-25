@@ -23,7 +23,7 @@ export function ChatSupport() {
     {
       id: "welcome",
       sender: "ai",
-      text: "Bem-vindo ao *LuxuryCars Concierge Privado*.\n\nSou o seu assessor pessoal de aquisições e inteligência artificial da nossa coleção privada. Fui meticulosamente programado para conhecer em absoluto detalhe cada uma das extraordinárias obras de arte automóvel expostas na nossa galeria.\n\nSeja para comparar a engenharia de pista de dois hipercarros, filtrar modelos adequados ao seu perfil de investimento, analisar telemetria de performance ou preparar a sua admissão exclusiva num dos nossos showrooms em Lisboa, Porto, Portimão, Mónaco ou Dubai, estou inteiramente à sua disposição.\n\nComo posso servi-lo hoje, Excelentíssimo?",
+      text: "Bem-vindo ao *LuxuryCars Concierge Privado*.\n\nSou o seu assessor pessoal de aquisições e inteligência artificial da nossa coleção privada. Fui meticulosamente programado para conhecer em absoluto detalhe cada uma das extraordinárias obras de arte automóvel expostas na nossa galeria.\n\nSeja para comparar a engenharia de pista de dois hipercarros, filtrar modelos adequados ao seu perfil de investimento, analisar telemetria de performance ou preparar a sua admissão exclusiva num dos nossos showrooms em Lisboa, Porto, Portimão, Mónaco, Dubai ou São Paulo, estou inteiramente à sua disposição.\n\nComo posso servi-lo hoje, Excelentíssimo?",
       timestamp: new Date(),
     },
   ]);
@@ -173,7 +173,7 @@ export function ChatSupport() {
              "• **Comparação de Modelos**: Peça para comparar dois carros (ex: *'Compara o Ferrari com o Lamborghini Revuelto'*).\n" +
              "• **Filtragem de Orçamento**: Descubra modelos dentro do seu orçamento (ex: *'Que carros têm até 150 mil euros?'*).\n" +
              "• **Pesquisa por Origem**: Descubra modelos de certos países (ex: *'Quais os carros japoneses?'*).\n" +
-             "• **Agendamento**: Agende a sua visita aos showrooms de Lisboa, Porto, Portimão, Mónaco ou Dubai.\n\n" +
+             "• **Agendamento**: Agende a sua visita aos showrooms de Lisboa, Porto, Portimão, Mónaco, Dubai ou São Paulo.\n\n" +
              "Como posso ser útil neste momento?";
     }
 
@@ -415,7 +415,7 @@ export function ChatSupport() {
     let matchedCategory: Category | null = null;
     for (const [cat, keywords] of Object.entries(categoriesMap)) {
       if (keywords.some(kw => text.includes(kw))) {
-        matchedCategory = cat;
+        matchedCategory = cat as Category;
         break;
       }
     }
@@ -436,7 +436,7 @@ export function ChatSupport() {
              "   No topo desta página, logo abaixo da nossa apresentação, clique no botão dourado **'Marcar Visita'**. Este botão irá levá-lo diretamente à secção de contacto privado no rodapé do site.\n\n" +
              "3. **Ficha de Reserva Individual de Veículo**:\n" +
              "   Se estiver interessado num carro específico, aceda à página de detalhes do veículo (clicando em *'Detalhes'* no cartão do carro) e, no painel lateral direito da *Ficha Técnica*, clique no botão dourado **'Solicitar Reserva'** para abrir uma janela de email pré-preenchida.\n\n" +
-             "Lembramos que o acesso a qualquer um dos showrooms (Lisboa, Porto, Portimão, Mónaco ou Dubai) é efetuado estritamente sob convite e marcação prévia. Gostaria que eu preparasse os detalhes do seu pedido?";
+             "Lembramos que o acesso a qualquer um dos showrooms (Lisboa, Porto, Portimão, Mónaco, Dubai ou São Paulo) é efetuado estritamente sob convite e marcação prévia. Gostaria que eu preparasse os detalhes do seu pedido?";
     }
 
     // 12. HOW-TO FIND INFORMATION/DETAILS (INSTRUCTIONS)
@@ -537,7 +537,7 @@ export function ChatSupport() {
       {
         id: "welcome",
         sender: "ai",
-        text: "Bem-vindo ao *LuxuryCars Concierge Privado*.\n\nSou o seu assessor pessoal de aquisições e inteligência artificial da nossa coleção privada. Fui meticulosamente programado para conhecer em absoluto detalhe cada uma das extraordinárias obras de arte automóvel expostas na nossa galeria.\n\nSeja para comparar a engenharia de pista de dois hipercarros, filtrar modelos adequados ao seu perfil de investimento, analisar telemetria de performance ou preparar a sua admissão exclusiva num dos nossos showrooms em Lisboa, Porto, Portimão, Mónaco ou Dubai, estou inteiramente à sua disposição.\n\nComo posso servi-lo hoje, Excelentíssimo?",
+        text: "Bem-vindo ao *LuxuryCars Concierge Privado*.\n\nSou o seu assessor pessoal de aquisições e inteligência artificial da nossa coleção privada. Fui meticulosamente programado para conhecer em absoluto detalhe cada uma das extraordinárias obras de arte automóvel expostas na nossa galeria.\n\nSeja para comparar a engenharia de pista de dois hipercarros, filtrar modelos adequados ao seu perfil de investimento, analisar telemetria de performance ou preparar a sua admissão exclusiva num dos nossos showrooms em Lisboa, Porto, Portimão, Mónaco, Dubai ou São Paulo, estou inteiramente à sua disposição.\n\nComo posso servi-lo hoje, Excelentíssimo?",
         timestamp: new Date(),
       },
     ]);

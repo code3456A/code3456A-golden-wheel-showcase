@@ -7,7 +7,7 @@ export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
       { title: "Sobre a LuxuryCars — Arte e Alta Engenharia Automóvel" },
-      { name: "description", content: "Conheça a LuxuryCars. A nossa missão de exclusividade, os nossos showrooms de prestígio em Lisboa, Porto, Portimão, Mónaco e Dubai, e os nossos serviços concierge VIP." },
+      { name: "description", content: "Conheça a LuxuryCars. A nossa missão de exclusividade, os nossos showrooms de prestígio em Lisboa, Porto, Portimão, Mónaco, Dubai e São Paulo, e os nossos serviços concierge VIP." },
     ],
   }),
 });
@@ -252,7 +252,7 @@ function Sobre() {
             Solicite uma Visita
           </h2>
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-            Todas as visitas aos nossos showrooms de Lisboa, Porto, Portimão, Mónaco ou Dubai são sujeitas a aprovação de perfil. Assegure a sua privacidade agendando com antecedência.
+            Todas as visitas aos nossos showrooms de Lisboa, Porto, Portimão, Mónaco, Dubai ou São Paulo são sujeitas a aprovação de perfil. Assegure a sua privacidade agendando com antecedência.
           </p>
           <div className="pt-4">
             <a

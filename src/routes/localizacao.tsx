@@ -8,7 +8,7 @@ export const Route = createFileRoute("/localizacao")({
   head: () => ({
     meta: [
       { title: "Showrooms Privados e Localizações — LuxuryCars" },
-      { name: "description", content: "Explore as nossas localizações confidenciais em Lisboa, Porto, Portimão, Mónaco e Dubai. Showrooms exclusivos sob marcação prévia." },
+      { name: "description", content: "Explore as nossas localizações confidenciais em Lisboa, Porto, Portimão, Mónaco, Dubai e São Paulo. Showrooms exclusivos sob marcação prévia." },
     ],
   }),
 });
@@ -255,12 +255,12 @@ function Localizacao() {
             >
               <Navigation className="w-3.5 h-3.5" /> Agendar Visita a esta Galeria
             </a>
-            <a
-              href="/test-drive"
+            <Link
+              to="/test-drive"
               className="text-center px-6 py-4 bg-secondary text-primary-foreground text-xs tracking-[0.3em] uppercase font-semibold hover:bg-secondary/80 transition-all hover:shadow-gold flex items-center justify-center gap-2"
             >
               <CarIcon className="w-3.5 h-3.5" /> Test Drive
-            </a>
+            </Link>
             <p className="text-[10px] text-muted-foreground text-center italic">
               * O acesso aos showrooms é restrito a titulares de convite ou agendamento prévio aprovado.
             </p>

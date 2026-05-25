@@ -4,12 +4,12 @@ import { ArrowRight, Mail, Phone, Calendar, Car } from "lucide-react";
 
 export const Route = createFileRoute("/test-drive")({
   component: TestDrive,
-  head: () => (
-    <>
-      <title>Test Drive – LuxuryCars</title>
-      <meta name="description" content="Agende um test drive privado dos nossos veículos exclusivos. Formulário seguro e discreto para colecionadores." />
-    </>
-  ),
+  head: () => ({
+    meta: [
+      { title: "Test Drive – LuxuryCars" },
+      { name: "description", content: "Agende um test drive privado dos nossos veículos exclusivos. Formulário seguro e discreto para colecionadores." },
+    ],
+  }),
 });
 
 function TestDrive() {
@@ -118,6 +118,7 @@ function TestDrive() {
             <option value="Lisboa">Lisboa</option>
             <option value="Porto">Porto</option>
             <option value="Portimão">Portimão</option>
+            <option value="Mónaco">Mónaco</option>
             <option value="Dubai">Dubai</option>
             <option value="São Paulo">São Paulo</option>
           </select>
