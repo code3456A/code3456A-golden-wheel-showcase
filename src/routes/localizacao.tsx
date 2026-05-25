@@ -122,9 +122,12 @@ function Localizacao() {
           >
             Sobre Nós
           </Link>
-          <span className="text-[0.65rem] tracking-[0.3em] text-gold uppercase font-semibold border-b border-gold/45 pb-0.5">
-            Localização
-          </span>
+          <Link
+  to="/localizacao"
+  className="text-[0.65rem] tracking-[0.3em] text-gold uppercase font-semibold border-b border-gold/45 pb-0.5"
+>
+  Localização
+</Link>
           <Link
             to="/"
             hash="contacto"
@@ -249,6 +252,12 @@ function Localizacao() {
               className="text-center px-6 py-4 bg-gold text-primary-foreground text-xs tracking-[0.3em] uppercase font-semibold hover:bg-gold-bright transition-all hover:shadow-gold flex items-center justify-center gap-2"
             >
               <Navigation className="w-3.5 h-3.5" /> Agendar Visita a esta Galeria
+            </a>
+            <a
+              href="/test-drive"
+              className="text-center px-6 py-4 bg-secondary text-primary-foreground text-xs tracking-[0.3em] uppercase font-semibold hover:bg-secondary/80 transition-all hover:shadow-gold flex items-center justify-center gap-2"
+            >
+              <Car className="w-3.5 h-3.5" /> Test Drive
             </a>
             <p className="text-[10px] text-muted-foreground text-center italic">
               * O acesso aos showrooms é restrito a titulares de convite ou agendamento prévio aprovado.
