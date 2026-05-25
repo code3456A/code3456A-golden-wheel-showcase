@@ -112,6 +112,39 @@ export function ChatSupport() {
   const generateAIResponse = (userText: string): string => {
     const text = userText.toLowerCase().trim();
 
+    // 0. SCOPE GUARDRAIL: Only respond to LuxuryCars-related topics
+    const allowedKeywords = [
+      "bugatti", "chiron", "koenigsegg", "jesko", "porsche", "taycan", "gt3", "tesla", "plaid", 
+      "nevera", "rimac", "ferrari", "revuelto", "sf90", "mazda", "rx-7", "rx7", "supra", "toyota", 
+      "skyline", "gtr", "nissan", "dodge", "charger", "hellcat", "mustang", "ford", "shelby", 
+      "pagani", "huayra", "mclaren", "senna", "lamborghini", "lambo", "aston", "valkyrie",
+      "hypercar", "hypercars", "hipercarro", "hipercarros", "supercar", "supercars", "supercarro", 
+      "supercarros", "jdm", "muscle", "electric", "elétrico", "elétricos", "eletrico", "eletricos",
+      "motor", "velocidade", "cavalos", "cv", "potência", "potencia", "acelera", "aceleração", 
+      "aceleracao", "km/h", "caixa", "transmissão", "transmissao", "binário", "binario", "performance", 
+      "aerodinâmica", "aerodinamica", "tração", "tracao", "turbo", "v8", "v12", "w16", "bateria", "autonomia",
+      "preço", "preco", "preços", "precos", "valor", "valores", "custo", "custa", "quanto", 
+      "orçamento", "orcamento", "orçamentos", "orcamentos", "barato", "baratos", "caro", "caros", 
+      "comprar", "compra", "reserva", "reservar", "solicitar", "venda", "comprovativo", "pagamento", 
+      "retoma", "avaliação", "avaliacao", "investimento", "investimentos", "euros", "€",
+      "showroom", "showrooms", "galeria", "galerias", "visita", "visitas", "visitar", "agendar", 
+      "agenda", "agendamento", "marcar", "marcação", "marcacao", "contacto", "contactos", "email", 
+      "morada", "onde", "localização", "localizacao", "localizações", "localizacoes", "lisboa", 
+      "porto", "portimão", "portimao", "mónaco", "monaco", "dubai", "foz", "marina", "nações", "nacoes",
+      "sobre", "história", "historia", "empresa", "fundador", "fundadores", "quem são", "quem somos", 
+      "luxurycars", "site", "página", "pagina", "aba", "ajuda", "o que fazes", "comandos", "anexar", 
+      "anexo", "ficheiro", "ficheiros", "imagem", "imagens",
+      "olá", "ola", "oi", "boas", "bom dia", "boa tarde", "boa noite", "alô", "alo", "hello", "hi", 
+      "obrigado", "obrigada", "agradecido", "grato", "perfeito", "sim", "não", "nao", "ok", "reiniciar", 
+      "limpar", "reset", "como", "como estas", "como está", "como faz", "como faço"
+    ];
+
+    const isOutOfScope = !allowedKeywords.some(kw => text.includes(kw));
+
+    if (isOutOfScope) {
+      return "Como assessor digital privado da **LuxuryCars**, a minha assistência é estritamente dedicada à nossa coleção de automóveis exclusivos, aos nossos showrooms e aos serviços da LuxuryCars.\n\nPor favor, indique se deseja obter informações sobre alguma das nossas viaturas de elite, comparar especificações técnicas ou agendar uma visita privada a uma das nossas galerias (Lisboa, Porto, Portimão, Mónaco ou Dubai).";
+    }
+
     // 1. GREETINGS
     if (/^(olá|oi|boas|bom dia|boa tarde|boa noite|alô|hello|hi|salut|como estas|como está)/i.test(text)) {
       return "Olá! É um privilégio interagir consigo.\n\nComo concierge da LuxuryCars, estou preparado para lhe dar todos os detalhes técnicos, valores ou ajudar no agendamento do showroom. Gostaria de explorar alguma categoria específica (Hypercars, Supercars, JDM, Muscle, Electric) ou tem algum modelo em mente?";

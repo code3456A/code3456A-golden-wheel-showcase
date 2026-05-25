@@ -105,8 +105,20 @@ function Index() {
         </div>
 
         <nav className="absolute top-0 left-0 right-0 flex items-center justify-between px-6 md:px-12 py-6 z-20">
-          <span className="text-[0.65rem] tracking-[0.4em] text-gold uppercase">◆ Showroom</span>
-          <span className="text-[0.65rem] tracking-[0.4em] text-muted-foreground uppercase hidden md:block">Lisboa · Porto · Portimão · Mónaco · Dubai</span>
+          <Link to="/" className="text-[0.65rem] tracking-[0.4em] text-gold uppercase hover:text-gold-bright transition-colors font-medium">
+            ◆ LuxuryCars
+          </Link>
+          <div className="flex items-center gap-6 sm:gap-8">
+            <a href="#colecao" className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors">
+              Coleção
+            </a>
+            <Link to="/sobre" className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors">
+              Sobre Nós
+            </Link>
+            <a href="#contacto" className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors">
+              Contacto
+            </a>
+          </div>
         </nav>
 
         <div className="fade-up">

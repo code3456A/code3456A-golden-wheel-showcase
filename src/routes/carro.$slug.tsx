@@ -52,10 +52,30 @@ function CarDetail() {
     <main className="min-h-screen bg-noise">
       {/* TOP NAV */}
       <nav className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-6 md:px-12 py-6">
-        <Link to="/" className="text-[0.65rem] tracking-[0.4em] text-gold uppercase hover:text-gold-bright transition-colors">
+        <Link to="/" className="text-[0.65rem] tracking-[0.4em] text-gold uppercase hover:text-gold-bright transition-colors font-medium">
           ← LuxuryCars
         </Link>
-        <span className="text-[0.65rem] tracking-[0.4em] text-muted-foreground uppercase hidden md:block">{car.category}</span>
+        <div className="flex items-center gap-6 sm:gap-8">
+          <Link
+            to="/"
+            className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors"
+          >
+            Coleção
+          </Link>
+          <Link
+            to="/sobre"
+            className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors"
+          >
+            Sobre Nós
+          </Link>
+          <Link
+            to="/"
+            hash="contacto"
+            className="text-[0.65rem] tracking-[0.3em] text-muted-foreground hover:text-gold uppercase transition-colors"
+          >
+            Contacto
+          </Link>
+        </div>
       </nav>
 
       {/* HERO IMAGE */}
